@@ -3,8 +3,7 @@ from discord.ext import commands
 from discord.commands import slash_command
 
 
-intents = discord.Intents().all()
-bot = commands.Bot(command_prefix='!',intents = intents)
+bot = commands.Bot(command_prefix='!',intents=discord.Intents.all(),help_command=None)
 token = ""
 
 @bot.event
