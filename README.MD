@@ -10,7 +10,7 @@
 - 可透過DC私訊 tofu.1201  或者 3.14159265358_
 
 ## 開發團隊
-- 程式原作者：一塊豆腐 (tofu.1201) 、 ChenArnold (3.14159265358_)
+- 程式原作者：一塊豆腐 (tofu.1201) 、 ChenArnold (3.14159265358_) 、 幻影
 
 ## 現成機器人
 - [Discord群組](https://discord.gg/VQUzhBYj85)
